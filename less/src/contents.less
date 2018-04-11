@@ -1,0 +1,262 @@
+button.contents-navigation.base {
+  background: @white;
+  color: @midnight-blue;
+
+  .contents-navigation-icon.icon,
+  .contents-navigation-text {
+    color: @midnight-blue;
+  }
+}
+
+.contents-hide {
+  button.contents-navigation.base {
+    color: @navigation-icon-color;
+    background: transparent;
+
+    .contents-navigation-icon,
+    .contents-navigation-text {
+      color: @navigation-icon-color;
+      .transition-color;
+    }
+
+    .no-touch &:hover {
+    color: @navigation-icon-color-hover;
+      background: transparent;
+
+      .contents-navigation-icon.icon,
+      .contents-navigation-text {
+        color: @navigation-icon-color-hover;
+        .transition-color;
+      }
+    }
+
+  }
+}
+
+button.base.contents-navigation {
+  border-radius: 0;
+
+  .contents-navigation-text {
+    line-height: 100%;
+    position: fixed;
+    top: 50px;
+    margin-left: 10px;
+    font-size: 13px;
+    font-family: @font-family;
+  }
+
+  .no-touch &:hover {
+    background-color: @white;
+
+    .contents-navigation-icon.icon,
+    .contents-navigation-text {
+      color: darken(@navigation-color, 10%);
+      -webkit-transition: color 0.25s ease-in;
+      -moz-transition: color 0.25s ease-in;
+      -ms-transition: color 0.25s ease-in;
+      transition: color 0.25s ease-in;
+    }
+  }
+}
+
+.contents {
+  background-color: @white;
+  color: @navigation-color;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+
+  .drawer-toolbar .icon {
+    color: @drawer-color;
+    padding: @navigation-padding;
+    .transition-color;
+    display: none;
+
+    .no-touch &:hover {
+      color: @drawer-icon-color-hover;
+    }
+  }
+
+  .contents-shadow {
+    box-shadow: -2px 0px 0px 0px fade(@light-grey, 50%) inset;
+    border-radius: 0;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    z-index: 99;
+  }
+
+  .drawer-inner {
+    height: initial;
+
+    .dir-rtl & {
+      border-left: inherit;
+      border-right: 5px solid @drawer-border-color;
+    }
+  }
+
+  .contents-item {
+    .drawer-item-title {
+      .sub-title;
+    }
+
+    .drawer-item-description {
+      font-size: @body-text-font-size;
+      line-height: @body-text-line-height;
+    }
+
+    .contents-item-title {
+      position: relative;
+      border-bottom: 1px solid @transparency;
+      color: @stone-grey;
+      background-color: @light-grey;
+      width: 100%;
+      border-radius: 0;
+
+      .no-touch &:hover {
+        background-color: darken(@light-grey, 10%);
+        color: @stone-grey;
+      }
+
+      &.highlight {
+        // border-left: 5px solid @navigation-color;
+        background-color: @contents-hover;
+        .no-touch &:hover {
+          background-color: darken(@contents-hover, 10%);
+        }
+      }
+
+
+    }
+  }
+
+  .contents-item-title {
+    padding: 10px 20px;
+    .transition-background-color;
+
+    //stops rollover of drawar items on touch devices
+    .no-touch &:hover {
+      background-color: @drawer-color;
+    }
+  }
+
+  button {
+
+    &:hover {
+    }
+  }
+}
+
+.page-level-progress-item-optional-text {
+  line-height: 1em;
+  text-align: right;
+}
+
+.contents-progress-indicator {
+  width: 16%;
+  height: 10px;
+  margin-left: 4%;
+
+  .dir-rtl & {
+    margin-left: inherit;
+    margin-right: 4%;
+  }
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: @item-color-hover;
+}
+
+.contents-indicator-bar {
+  width: 0;
+}
+
+.contents-item-title-inner {
+  font-size: 18px;
+  font-family: @font-family;
+}
+
+.contents-progress-indicator {
+  border: 1px solid fade(@mid-grey, 20%);
+  background-color: transparent;
+  .transition-background-color;
+
+  &.contents-progress-indicator-complete {
+    border: 1px solid @primary-color-inverted;
+    background-color: @primary-color-inverted;
+    .contents-indicator-bar {
+      background-color: @primary-color-inverted !important;
+    }
+  }
+}
+
+.kings-business-school-logo {
+
+  user-select: none;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  color: @foreground-color-inverted;
+
+  .kings-business-school-icon {
+    text-transform: capitalize;
+    font-family: @font-header-family;
+    font-size: 24px;
+    padding-bottom: 10px;
+    line-height: 105%;
+    color: @footer-icon-color;
+  }
+
+  .kings-business-school-copyright {
+    font-size: 13px;
+    color: @footer-icon-color;
+  }
+}
+
+.contents-page {
+  border: 1px solid #B7BDBD;
+  border-width: 0 0 1px;
+
+  .contents-landing-page-title {
+    background-color: transparent;
+    color: @midnight-blue;
+    border: 0;
+
+    .contents-landing-page-title-inner {
+      margin-left: 0;
+      width: 232px;
+    }
+
+    .no-touch &:hover {
+      background-color: darken(@white, 10%);
+      color: @midnight-blue;
+      border-radius: 0;
+    }
+  }
+
+  .contents-page-title {
+    background-color: @white;
+    color: @midnight-blue;
+    border-radius: 0;
+    border-width: 0;
+
+
+    .no-touch &:hover {
+      background-color: darken(@white, 10%);
+      color: @midnight-blue;
+      border-color: #B7BDBD;
+    }
+
+    .contents-page-title-inner, .contents-landing-page-title-inner {
+      font-size: 16px;
+    }
+
+    .contents-page-title-arrow {
+      top: 40px;
+      .left-arrow,
+      .right-arrow {
+        background: @light-grey;
+      }
+    }
+  }
+}

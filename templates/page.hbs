@@ -1,0 +1,59 @@
+<div class="page-inner article-container" role="main" aria-label="{{_globals._accessibility._ariaLabels.page}}">
+
+  <div class="page-header" style="background: url('{{_graphic.src}}')">
+    <div class="page-header-inner clearfix">
+
+      <div class="page-header-content">
+        <div class="page-header-content-inner">
+
+          {{#if body}}
+            <div class="page-body">
+              <div class="page-body-inner">
+                {{#if pageBody}}
+                  {{{a11y_text pageBody}}}
+                {{else}}
+                  {{{a11y_text body}}}
+                {{/if}}
+              </div>
+            </div>
+          {{/if}}
+
+          {{#if displayTitle}}
+            <br>
+            <div class="page-title">
+              <div class="page-title-inner h1" tabindex="0" role="heading" aria-level="1">
+                {{{displayTitle}}}
+              </div>
+            </div>
+          {{/if}}
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+<div class='page-footer'>
+	<div class="page-footer-inner">
+		<div class='page-footer-logo'>
+			<div class="page-footer-icon">
+				King's<br>Business<br>School
+			</div>
+			<div class="page-footer-copyright">
+				© King's College London. All rights reserved
+			</div>
+		</div>
+		<div class="page-footer-staircase">
+			<div class="page-footer-staircase-inner">
+				<div class="staircase stair-1"></div>
+				<div class="staircase stair-2"></div>
+				<div class="staircase stair-3"></div>
+				<div class="staircase stair-4"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="aria-label relative a11y-ignore-focus prevent-default" tabindex="0" role="region">{{_globals._accessibility._ariaLabels.pageEnd}}</div>

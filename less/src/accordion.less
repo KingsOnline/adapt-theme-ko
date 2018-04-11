@@ -1,0 +1,138 @@
+.accordion-component {
+    .accordion-item {
+        margin-bottom: @item-margin-bottom;
+    }
+
+    .accordion-item-title-icon {
+        right: 40px;
+        left: inherit;
+
+        &.icon-minus:before {
+          content: "";
+        }
+
+        &.icon-plus:before {
+          content: "";
+        }
+
+        .left-arrow,
+        .right-arrow {
+          background: @item-text-color;
+          position: absolute;
+          width: 12px;
+          height: 3px;
+          top: 10px;
+        }
+
+        .right-arrow {
+          left: 7px;
+        }
+
+        &.icon-plus {
+          .left-arrow {
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+
+          .right-arrow {
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+          }
+        }
+
+        &.icon-minus {
+          .left-arrow {
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+          }
+
+          .right-arrow {
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+
+    }
+
+    .accordion-item-title {
+        color: @item-text-color;
+        background-color: @item-color;
+        border: @button-border;
+        border-radius: 0;
+        border-width: 1px 0 0;
+        padding: 20px;
+        .item-title;
+
+
+        .dir-rtl & {
+            padding-left:inherit;
+            padding-right:(@icon-size+(@item-padding-left*2));
+        }
+
+        &.visited {
+            color: @item-text-color-visited;
+            background-color: @item-color-visited;
+            border-color: @item-border-color-visited;
+
+            .accordion-item-title-icon {
+                color: @item-text-color-visited;
+            }
+        }
+
+        &.selected {
+            color: @item-text-color-selected;
+            background-color: @item-color-selected;
+            border-color: @item-border-color-selected;
+            border-width: 1px 0 0 0;
+
+            .accordion-item-title-icon {
+                color: @item-text-color-selected;
+            }
+        }
+        .no-touch & {
+            &:hover {
+                color: @item-text-color-hover;
+                background-color: @item-color-hover;
+                border-color: @item-border-color-hover;
+
+                .accordion-item-title-icon {
+                    color: @item-text-color-hover;
+                }
+            }
+            &.visited:hover {
+                color: @item-text-color-hover;
+                background-color: @item-color-hover;
+                border-color: @item-border-color-hover;
+
+                .accordion-item-title-icon {
+                    color: @item-text-color-hover;
+                }
+            }
+            &.selected:hover {
+				background-color: @item-color-hover;
+			}
+        }
+
+    }
+
+    .accordion-item-body {
+        color: @item-body-text-color;
+        background-color: @item-body-color;
+    }
+
+    .accordion-item-body-inner {
+        padding-top: @item-padding-top;
+        padding-bottom: @item-padding-bottom;
+        padding-left: @item-padding-left;
+        padding-right: @item-padding-right;
+    }
+
+    .accordion-widget {
+      border-bottom: 1px solid black;
+    }
+
+}

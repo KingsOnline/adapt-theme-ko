@@ -1,0 +1,53 @@
+a.tooltip {
+  outline: none;
+  text-decoration: none !important;
+  border-bottom: 1px dotted black;
+}
+
+a.tooltip strong {
+  line-height: 30px;
+}
+
+a.tooltip:hover {
+  color: @secondary-color !important;
+  border-bottom: 1px solid;
+}
+
+a.tooltip span {
+  z-index: 10;
+  display: none;
+  padding: 14px 20px;
+  margin-top: 30px !important;
+  max-width: 500px;
+  right: 20px;
+  left: 20px;
+}
+
+a.tooltip:hover span {
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  color: @notify-text-color;
+  background: @notify-color;
+}
+
+.callout {
+  z-index: 20;
+  position: absolute;
+  top: 30px;
+  border: 0;
+  left: -12px;
+}
+
+/*CSS3 extras*/
+
+a.tooltip span {
+  border-radius: 4px;
+  box-shadow: 5px 5px 8px #CCC;
+}
+@media print {
+  a.tooltip span {
+    display: block !important;
+    margin-bottom: 30px;
+  }
+}

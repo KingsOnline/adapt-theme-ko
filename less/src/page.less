@@ -1,0 +1,124 @@
+// Page styling
+// ============
+
+.page {
+  background-color: @background-color;
+
+  .page-header {
+    height: 300px;
+    background-color: @background-color-inverted;
+
+    .page-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  .page-header-content {
+    margin-top: 100px;
+  }
+
+  .page-title {
+    display: inline-block;
+    margin-bottom: @page-title-margin-bottom;
+    background-color: @midnight-blue;
+    color: @white;
+    padding: 5px;
+  }
+
+  .page-body {
+    display: inline-block;
+    margin-bottom: @page-body-margin-bottom;
+    background: @teal-green;
+    color: @white;
+    padding: 5px;
+  }
+
+  .page-instruction {
+    margin-bottom: @page-instruction-margin-bottom;
+    .instruction-text;
+  }
+}
+
+.page-footer {
+  background-color: @footer-color;
+  width: 100%;
+  height: 143px;
+
+  .page-footer-inner {
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+
+  .page-footer-logo {
+    float: left;
+    margin-left: 3%;
+    user-select: none;
+    @media all and (min-width: (@device-width-large - 200px)) {
+      width: 47%;
+    }
+    @media all and (max-width: (@device-width-large - 200px)) {
+      width: 300px;
+      float: none;
+      margin: 0 auto;
+    }
+    color: @foreground-color-inverted;
+
+    .page-footer-icon {
+      text-transform: capitalize;
+      font-family: @font-header-family;
+      font-size: 24px;
+      padding-bottom: 10px;
+      line-height: 105%;
+      color: @footer-icon-color;
+    }
+
+    .page-footer-copyright {
+      font-size: 13px;
+      color: @footer-icon-color;
+    }
+  }
+
+  .page-footer-staircase {
+    float: right;
+    margin-right: 3%;
+    width: 43%;
+    margin-top: -79px;
+
+    @media all and (max-width: (@device-width-large - 200px)) {
+      display: none;
+    }
+
+    .page-footer-staircase-inner {
+      margin: 0 auto;
+      float: right;
+
+      .staircase {
+        background-color: @footer-icon-color;
+        width: 100px;
+        height: 20px;
+        position: relative;
+      }
+
+      .stair-1 {
+        top: 180px;
+        right: 300px;
+      }
+
+      .stair-2 {
+        top: 120px;
+        right: 200px;
+      }
+
+      .stair-3 {
+        top: 60px;
+        right: 100px;
+      }
+
+      .stair-4 {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}

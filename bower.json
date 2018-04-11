@@ -1,0 +1,15 @@
+{
+  "name": "adapt-theme-finBank",
+  "version": "0.4.6",
+  "framework": "^2.1.0",
+  "homepage": "https://github.com/adaptlearning/adapt-theme-finBank",
+  "displayName": "Global Banking and Finance",
+  "theme": "finBank",
+  "description": "Theme for the Global banking and finance module",
+  "main": "js/vanilla.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-theme"
+  ],
+  "license": "GPLv3"
+}

@@ -1,0 +1,21 @@
+.slideshow-component .slideshow-content-inner {
+  .slideshow-progress-bar {
+    width: 70%;
+    margin: 0 auto;
+    background: transparent;
+    border: 0;
+    height: 10px;
+
+    .slideshow-progress-tick {
+      background-color: @teal-green;
+      height: 100%;
+
+      &.visited {
+        background-color: @teal-green;
+      }
+      &.active {
+        background-color: @midnight-blue;
+      }
+    }
+  }
+}

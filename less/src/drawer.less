@@ -1,0 +1,96 @@
+// Drawer styling
+// ==============
+
+.drawer {
+  background-color: @drawer-color;
+  color: @drawer-item-text-color;
+
+  .drawer-toolbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid @drawer-border-color;
+    background-color: @stone-grey;
+    color: @white;
+  }
+
+  .drawer-toolbar .icon {
+    color: @navigation-icon-color;
+    padding: @navigation-padding;
+    .transition-color;
+
+    .no-touch &:hover {
+      color: @navigation-icon-color-hover;
+    }
+  }
+
+  .drawer-title {
+    position: absolute;
+    top: 20px;
+    left: 135px;
+    font-size: @body-text-font-size;
+    line-height: @body-text-line-height;
+    font-family: @font-header-family;
+  }
+
+  .drawer-holder {
+    padding-top: ((@navigation-padding * 2) + @icon-size + 1);
+  }
+
+  .drawer-inner {
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.26);
+
+    .dir-rtl & {
+      border-left: inherit;
+      border-right: 5px solid @drawer-border-color;
+    }
+  }
+
+  .drawer-item {
+    .drawer-item-title {
+      .sub-title;
+    }
+
+    .drawer-item-description {
+      font-size: @body-text-font-size;
+      line-height: @body-text-line-height;
+    }
+
+    .drawer-item-open {
+      border-bottom: 1px solid @drawer-item-color;
+      color: @drawer-item-text-color;
+      text-decoration: none;
+      width: 100%;
+    }
+  }
+
+  .drawer-item-open {
+    padding: @drawer-item-padding-top @drawer-item-padding-right @drawer-item-padding-bottom @drawer-item-padding-left;
+    .transition-background-color;
+
+    //stops rollover of drawar items on touch devices
+    .no-touch &:hover {
+      background-color: @drawer-color;
+    }
+  }
+}
+
+.list-item input {
+  border: 3px solid @drawer-item-color;
+  color: @drawer-item-color;
+  max-width: 260px;
+}
+
+.no-touch .search-results .search-result {
+  border-bottom: 0;
+}
+
+.no-touch .search-results .search-result:hover {
+  background: #deeeef;
+
+  .result-foundwords,
+  .result-preview,
+  .result-title {
+    color: @midnight-blue;
+  }
+}

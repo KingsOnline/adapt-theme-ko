@@ -1,0 +1,78 @@
+.hotgraphic-component {
+
+	.hotgraphic-graphic-pin {
+		background-color: @item-text-color;
+
+		&.visited {
+			.hotgraphic-graphic-pin-icon {
+				color: darken(@white, 10%);
+			}
+		}
+		.no-touch &:hover {
+			background-color: @item-text-color;
+
+			.hotgraphic-graphic-pin-icon {
+				color: darken(@white, 5%);
+			}
+		}
+	}
+
+	.hotgraphic-graphic-pin-icon {
+		color: @white;
+	}
+
+	.hotgraphic-popup {
+		background-color: @background-color;
+		border: @item-border;
+	}
+
+	.hotgraphic-popup-toolbar {
+		background-color: @item-color;
+	}
+
+	.hotgraphic-popup-nav {
+		background-color: @item-color;
+	}
+
+	.hotgraphic-popup-done {
+		.no-touch &:hover {
+			.hotgraphic-popup-close {
+				color: darken(@button-color, 10%);
+			}
+		}
+	}
+
+	.hotgraphic-popup-arrow-l,
+	.hotgraphic-popup-arrow-r,
+	.hotgraphic-popup-close {
+		padding: @item-padding;
+		color: @button-color;
+
+		.no-touch &:hover {
+			color: darken(@button-color, 10%);
+		}
+	}
+
+	.hotgraphic-popup-count {
+		padding: @item-padding;
+		color: @item-text-color;
+	}
+
+	.hotgraphic-popup-controls {
+		.no-touch &:hover {
+			.hotgraphic-popup-arrow-l,
+			.hotgraphic-popup-arrow-r {
+				color: darken(@button-color, 10%);
+			}
+		}
+	}
+
+	.hotgraphic-popup-inner {
+		padding: @item-padding;
+	}
+
+	.hotgraphic-content-title {
+		.item-title;
+		margin-bottom: @title-text-margin;
+	}
+}

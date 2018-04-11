@@ -1,0 +1,119 @@
+// Navigation styling
+// ==================
+
+.navigation {
+  width: 100%;
+  overflow: hidden;
+  background-color: @navigation-color;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  height: (@navigation-padding * 2) + @icon-size;
+
+  .ie8 & {
+    max-width: @ie8-max-width;
+  }
+
+  .icon {
+    padding: 10px 20px 30px;
+    color: @navigation-icon-color;
+    .transition-color;
+    border: 1px solid fade(@navigation-icon-color, 46%);
+    border-width: 0 0 0 1px;
+    border-radius: 0;
+    position: relative;
+
+    &.contents-navigation {
+      border-width: 0 1px 0 0;
+
+      .no-touch &:hover {
+        border-width: 0 1px 0 0;
+      }
+    }
+
+    &.navigation-back-button {
+      display: none;
+    }
+
+    .no-touch &:hover {
+      color: @navigation-icon-color-hover;
+      border: 1px solid fade(@navigation-icon-color, 46%);
+      border-width: 0 0 0 1px;
+      border-radius: 0;
+
+      &.icon-printer:before {
+        background: url("assets/print-hover.svg");
+      }
+
+      &.icon-search:before {
+        background: url("assets/search-hover.svg");
+      }
+
+      &.icon-exit:before {
+        background: url("assets/exit-hover.svg");
+      }
+
+      // &.icon-menu:before {
+      //   background: url("assets/contents-hover.svg");
+      // }
+    }
+
+    &.icon-printer:before {
+      background: url("assets/print.svg");
+      color: transparent;
+      background-repeat: no-repeat !important;
+    }
+
+    &.icon-search:before {
+      background: url("assets/search.svg");
+      color: transparent;
+      background-repeat: no-repeat !important;
+    }
+
+    &.icon-exit:before {
+      background: url("assets/exit.svg");
+      color: transparent;
+      background-repeat: no-repeat !important;
+    }
+
+    // &.icon-menu:before {
+    //   background: url("assets/contents.svg");
+    //   color: transparent;
+    //   background-repeat: no-repeat !important;
+    // }
+
+    .icon-label,
+    .toolbox-button-label {
+      font-size: 11px;
+      margin-top: 5px;
+      text-transform: uppercase;
+      font-family: @font-family;
+      position: absolute;
+      text-align: center;
+      margin-left: -30%;
+      width: 100%;
+    }
+  }
+
+  .skip-nav-link {
+    background-color: @button-color;
+    border-radius: 0;
+    color: @button-text-color;
+    display: none;
+    left: 0;
+    margin-top: 0;
+    padding: 10px 20px;
+    position: absolute;
+    top: -46px;
+    -webkit-transition: top 0.2s ease-out;
+    transition: top 0.2s ease-out;
+    width: auto;
+    z-index: 100;
+
+    .accessibility & {
+      display: inline-block;
+    }
+
+    &:focus {
+      top: 0;
+    }
+  }
+}

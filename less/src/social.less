@@ -1,0 +1,18 @@
+.social-inner .social-open-button {
+
+  .close-text {  // delete code below in block to remove disabled state.
+    display: none !important;
+  }
+
+  &.open {
+    background-color: @button-color-disabled!important;
+    border-color: @button-border-color-disabled!important;
+    color: @button-text-color-disabled!important;
+    cursor: default;
+    pointer-events: none;
+
+    .no-touch &:hover {
+      border-color: @button-border-color-disabled;
+    }
+  }
+}
