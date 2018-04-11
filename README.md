@@ -1,31 +1,50 @@
-# adapt-contrib-vanilla  
+# adapt-theme-ko  
 
-**Vanilla** is a *theme* bundled with the [Adapt framework](https://github.com/adaptlearning/adapt_framework).  
+**adapt-theme-ko** is a master theme used by the King's Online team to create themes from April 2018 onwards.
 
-<img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/vanilla01.jpg" alt="sample colors from the vanilla theme">  
+## Creating a new theme
 
-It provides specific values to styles, including colors, padding, margins, and assets such as fonts and background images. [Visit the **Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about its functionality and for explanations of key properties. 
+To create a new theme you should duplicate this folder. Remove the `.git` folder, rename the folder to the name of the theme. Then create a new git project by adding it into your git client.
 
-## Installation
+## Features
 
-As Adapt's *[core theme](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#theme),* **Vanilla** is included with the [installation of the Adapt framework](https://github.com/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework#installation) and the [installation of the Adapt authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki/Installing-Adapt-Origin).
 
-* If **Vanilla** has been uninstalled from the Adapt framework, it may be reinstalled.
-With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run the following from the command line:  
-`adapt install adapt-contrib-vanilla`
+### Fonts
 
-    Alternatively, this component can also be installed by adding the following line of code to the *adapt.json* file:  
-    `"adapt-contrib-vanilla": "*"`  
-    Then running the command:  
-    `adapt install`  
-    (This second method will reinstall all plug-ins listed in *adapt.json*.)  
+All the King's style fonts have been added.
 
-* If **Vanilla** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
+### LESS
 
-## Uninstallation
+LESS files have been created for all the components and extensions that users may use. On top of what is in Vanilla this also includes:
 
-The Adapt framework does not allow the installation of more than one theme at a time. In order to replace **Vanilla** it must be uninstalled. With the root of your framework installation as your current working directory, run the following command:  
-`adapt uninstall adapt-contrib-vanilla`  
+  *  component-icon
+  *  contents
+  *  flipcard
+  *  goTop
+  *  kaltura
+  *  social
+  *  stacklist
+  *  print
+  *  triggered
+  *  tooltip - see below
+
+If you use a new extension and component and want to see a need to have theme specific styling create a new less file and add it here.
+
+### Custom CSS
+
+We've implemented Custom CSS for the following:
+
+  * Blockquote - allows you to have embed quotes
+  * Print - If you use adapt-print
+
+
+### tooltip
+
+A feature that implements a hover state for specific words. Add the code below in any component to use.
+
+`<a class="tooltip">Label name<span>When you hover on the anchor text I will appear</span></a>`
+
+# Stuff from vanilla
 
 ## Settings overview
 
@@ -39,11 +58,11 @@ Unlike most Adapt plug-ins, the **Vanilla** theme has no attributes that are req
 >**_minimumHeights** (object): The minimum heights attribute group specifies the minimum height of the block at different device widths (`_large`, `_medium`, and `_small`).   
 
 >>**_large** (number): This value specifies the CSS minimum height when `Adapt.device.screenSize'` evaluates to `"_large"`.  
-        
+
 >>**_medium** (number): This value specifies the CSS minimum height when `Adapt.device.screenSize'` evaluates to `"_medium"`.   
-        
+
 >>**_small** (number): This value specifies the CSS minimum height when `Adapt.device.screenSize'` evaluates to `"_small"`.   
- 
+
 >**_isDividerBlock** (boolean): - Determines whether the CSS class `divider-block` *(less/src/theme-extras.less)* will be applied. Acceptable values are `true` and `false`.
 
 Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about how to use and manipulate the theme.  
@@ -69,16 +88,16 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 **Vanilla** supports customisation for the rendering of various Adapt elements through the use of [Handlebars](http://handlebarsjs.com/) templates.  The file name of the template indicates the element it affects. Among the available templates are:
 * article.hbs
 * block.hbs
-* loading.hbs 
+* loading.hbs
 * navigation.hbs
 * page.hbs
 
 ## Limitations
- 
+
 No known limitations.  
 
 ----------------------------
-**Version number:**  2.1.0   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a> 
+**Version number:**  2.1.0   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>
 **Framework versions:**  2.1.0     
 **Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-vanilla/graphs/contributors)    
 **Accessibility support:** WAI AA   
