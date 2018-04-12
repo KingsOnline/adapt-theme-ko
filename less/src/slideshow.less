@@ -7,48 +7,15 @@
     height: 10px;
 
     .slideshow-progress-tick {
-      background-color: @teal-green;
+      background-color: @primary-color;
       height: 100%;
 
       &.visited {
-        background-color: @teal-green;
+        background-color: @primary-color;
       }
       &.active {
-        background-color: @midnight-blue;
+        background-color: @tertiary-color;
       }
     }
   }
-}
-
-.social-inner {
-  margin: 20px;
-
-  .social-open-button {
-    width: 100%;
-    background-color: @special-button-color;
-    border-color: @special-button-border;
-
-    .no-touch & {
-      &:hover {
-        border-color: @special-button-color;
-        background-color: @special-button-color;
-      }
-    }
-  }
-}
-
-.sideview .sideview-controls {
-  background-color: @stone-grey;
-  color: @white;
-  &:hover {
-    color: @light-grey;
-  }
-}
-
-.sideview.open .sideview-controls-close-button {
-  border-width: 0;
-}
-
-.sideview .sideview-controls-title {
-  font-family: @font-header-family;
 }
