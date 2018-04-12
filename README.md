@@ -4,10 +4,21 @@
 
 ## Creating a new theme
 
-To create a new theme you should duplicate this folder. Remove the `.git` folder, rename the folder to the name of the theme. Then create a new git project by adding it into your git client.
+To create a new theme you should duplicate this folder. Remove the `.git` folder, rename the folder to the name of the theme. Then create a new Git project by adding it into your Git client.
 
 ## Features
 
+### Contents
+
+Adapt-contents is an extension that is created by the King's Online team and acts shows the student the page structure and as well as where they are on the current page.
+
+### Quicknav
+
+Quicknav sits on the bottom of the page and the student uses it acts as another option for the student to navigate to the next page.
+
+### Print page
+
+Accessibility is something the King's Online team keeps as a priority and we think that having a printable course is something that all students can appreciate. We use the Print page extension also created by KO to add a print icon the navigation bar and apply the CSS styling to the page to make it look good when printing.
 
 ### Fonts
 
