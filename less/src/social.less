@@ -16,3 +16,37 @@
     }
   }
 }
+
+
+.social-inner {
+  margin: 20px;
+
+  .social-open-button {
+    width: 100%;
+    background-color: @cta-button-color;
+    border-color: @cta-button-border-color;
+
+    .no-touch & {
+      &:hover {
+        border-color: @cta-button-border-color-hover;
+        background-color: @cta-button-color-hover;
+      }
+    }
+  }
+}
+
+.sideview .sideview-controls {
+  // background-color: @dark-grey;
+  color: @white;
+  &:hover {
+    color: @light-grey;
+  }
+}
+
+.sideview.open .sideview-controls-close-button {
+  border-width: 0;
+}
+
+.sideview .sideview-controls-title {
+  font-family: @font-header-family;
+}
