@@ -8,35 +8,30 @@
 @mid-grey: #546e7a;
 @dark-grey: #37474f;
 @red: #f26c4f;
-@green: #82ca9c;
+@green: #4b755a;
 
-// finBank Colors
+// Theme Colors
 // ===========
 
-@orange: #ff5f05;
-@grey: #3c3c3c;
-@lime-green: #c6e128;
-@teal-green: #009ea0;
-@soft-pink: #fc5e72;
-@pale-grey: #DADFE3;
-@stone-grey: #5A6469;
-@midnight-blue: #0A2D50;
 
 // Main Colors
 // ===========
-@contents-hover: #deeeef;
+
 // Components
-@primary-color: transparent;
-@primary-color-inverted: @teal-green;
+@primary-color: @red;
+@primary-color-inverted: @white;
 // Buttons
-@secondary-color: @white;
-@secondary-color-inverted: @teal-green;
-// Navigation Bar
-@tertiary-color: fade(@teal-green, 75%);
-@tertiary-color-inverted: @black;
-// Drawer
+@secondary-color: @blue;
+@secondary-color-inverted: @white;
+// Call to action button
+@cta-color: @red;
+@cta-color-inverted: @white;
+// Contents and Search drawer
+@tertiary-color: @green;
+@tertiary-color-inverted: @white;
+// Quicknav (bottom navigation)
 @quaternary-color: @white;
-@quaternary-color-inverted: @teal-green;
+@quaternary-color-inverted: @primary-color;
 // Body
 @foreground-color: @black;
 @background-color: @white;
@@ -46,7 +41,7 @@
 @validation-error: @red;
 @validation-success: @green;
 // Disabled States
-@disabled-color: @pale-grey;
+@disabled-color: #727272;
 @disabled-color-inverted: #ccc;
 
 @transparency: rgba(255,255,255,0.8);
@@ -55,39 +50,43 @@
 // Detailed Color setup
 // ====================
 
-@footer-color: #f3f3f3;
-@footer-icon-color: #5a6469;
-
 // Body
 @font-color: @foreground-color;
 @font-color-inverted: @foreground-color-inverted;
-@title-color: @midnight-blue;
-@title-color-inverted: @primary-color;
+@title-color: @primary-color;
+@title-color-inverted: @primary-color-inverted;
 
 // Buttons
-@button-color: @secondary-color-inverted;
-@button-color-hover: @secondary-color-inverted;
+@button-color: @secondary-color;
+@button-color-hover: darken(@button-color, 40%);
 @button-color-disabled: @disabled-color;
 
-@button-text-color: @white;
-@button-text-color-hover: @white;
-@button-text-color-disabled: @white;
+@button-text-color: @secondary-color-inverted;
+@button-text-color-hover: @secondary-color-inverted;
+@button-text-color-disabled: @disabled-color-inverted;
 
-@button-border-color: #016E70;
-@button-border-color-hover: @button-color;
-@button-border-color-disabled: @disabled-color;
+@button-border-color: @button-color;
+@button-border-color-hover: @button-color-hover;
+@button-border-color-disabled: @button-color-disabled;
 
-// special button
 
-@special-button-color: @stone-grey;
-@special-button-text-color: @white;
-@special-button-border: darken(@stone-grey, 10%);
+@cta-button-color: @cta-color;
+@cta-button-color-hover: darken(@cta-button-color, 40%);
+@cta-button-color-disabled: @disabled-color;
 
-// Navigation
+@cta-button-text-color: @cta-color-inverted;
+@cta-button-text-color-hover: @cta-color-inverted;
+@cta-button-text-color-disabled: @disabled-color-inverted;
+
+@cta-button-border-color: @cta-button-color;
+@cta-button-border-color-hover: @cta-button-color-hover;
+@cta-button-border-color-disabled: @button-color-disabled;
+
+// Navigation`
 @navigation-color: @tertiary-color;
 
-@navigation-icon-color: @white;
-@navigation-icon-color-hover: darken(@navigation-icon-color, 20%);
+@navigation-icon-color: @tertiary-color-inverted;
+@navigation-icon-color-hover: darken(@navigation-icon-color, 40%);
 
 @navigation-progress-color: @navigation-icon-color;
 @navigation-progress-color-hover: darken(@navigation-progress-color, 40%);
@@ -99,12 +98,12 @@
 
 // Drawer
 @drawer-color: @quaternary-color;
-@drawer-border-color: darken(@drawer-color, 140%);
+@drawer-border-color: darken(@drawer-color, 20%);
 
 @drawer-icon-color: @quaternary-color-inverted;
 @drawer-icon-color-hover: darken(@drawer-icon-color, 40%);
 
-@drawer-item-color: @quaternary-color-inverted;
+@drawer-item-color: @drawer-color;
 @drawer-item-color-hover: darken(@drawer-item-color, 40%);
 @drawer-item-color-selected: @drawer-item-color-hover;
 @drawer-item-color-disabled: @item-color-disabled;
@@ -120,13 +119,13 @@
 @drawer-progress-border-color: darken(@drawer-item-color, 20%);
 
 // Components
-@component-background-color: #f3f3f3;
+@component-background-color: darken(@background-color, 10%);
 
 @item-color: @primary-color;
-@item-color-hover: @item-color;
+@item-color-hover: darken(@item-color, 20%);
 @item-color-disabled: @disabled-color;
 @item-color-visited: desaturate(@item-color, 90%);
-@item-color-selected: #f3f3f3;
+@item-color-selected: @item-color-hover;
 
 @item-text-color: @primary-color-inverted;
 @item-text-color-hover: @item-text-color;
@@ -137,15 +136,15 @@
 @item-body-color: @background-color;
 @item-body-text-color: @foreground-color;
 
-@item-border-color: @grey;
-@item-border-color-hover: @item-border-color;
-@item-border-color-disabled: @item-border-color;
-@item-border-color-visited: darken(@item-border-color, 50%);
-@item-border-color-selected: darken(@item-border-color, 10%);
+@item-border-color: @item-color;
+@item-border-color-hover: @item-color-hover;
+@item-border-color-disabled: @item-color-disabled;
+@item-border-color-visited: @item-color-visited;
+@item-border-color-selected: @item-color-selected;
 @item-border-color-inverted: @item-text-color;
 
 // Menu
-@menu-item-color: transparent;
+@menu-item-color: @primary-color;
 @menu-item-text-color: @primary-color-inverted;
 @menu-item-progress-color: darken(@menu-item-color, 20%);
 @menu-item-progress-fill-color: @menu-item-text-color;
@@ -155,11 +154,11 @@
 @notify-color: @primary-color;
 @notify-text-color: @primary-color-inverted;
 
-@notify-icon-color: @white;
-@notify-icon-color-hover: darken(@notify-icon-color, 20%);
+@notify-icon-color: @notify-text-color;
+@notify-icon-color-hover: darken(@notify-color, 20%);
 
 @notify-button-color: @notify-text-color;
-@notify-button-color-hover: darken(@notify-button-color, 20%);
+@notify-button-color-hover: darken(@notify-color, 20%);
 
 @notify-button-text-color: @notify-color;
 @notify-button-text-color-hover: @notify-text-color;
