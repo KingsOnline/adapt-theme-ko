@@ -120,9 +120,9 @@ button.base.contents-navigation {
 
       &.highlight {
         // border-left: 5px solid @navigation-color;
-        background-color: @tertiary-color;
+        background-color: fade(@navigation-color, 10%);
         .no-touch &:hover {
-          background-color: darken(@tertiary-color, 10%);
+          background-color: fade(@navigation-color, 15%);
         }
       }
 
@@ -177,15 +177,15 @@ button.base.contents-navigation {
 }
 
 .contents-progress-indicator {
-  border: 1px solid fade(@mid-grey, 20%);
+  border: 1px solid  @navigation-color;
   background-color: transparent;
   .transition-background-color;
 
   &.contents-progress-indicator-complete {
-    border: 1px solid @primary-color-inverted;
-    background-color: @primary-color-inverted;
+    border: 1px solid @navigation-color;
+    background-color:  @navigation-color;
     .contents-indicator-bar {
-      background-color: @primary-color-inverted !important;
+      background-color: @navigation-color;
     }
   }
 }

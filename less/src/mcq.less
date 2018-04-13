@@ -7,12 +7,12 @@
   }
 
   .mcq-item label {
-    color: @item-text-color;
+    color: @item-color;
     display: block;
     margin-bottom: @item-margin-bottom;
     position: relative;
     z-index: 1;
-    background-color: @item-color;
+    background-color: @item-text-color;
     cursor: pointer;
     border: @button-border;
 
@@ -85,7 +85,7 @@
     z-index: 0;
 
     .mcq-item-icon.mcq-answer-icon {
-      color: @primary-color !important;
+      color: @primary-color;
     }
   }
 }
