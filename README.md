@@ -8,6 +8,10 @@ To create a new theme you should duplicate this folder. Remove the `.git` folder
 
 ## Features
 
+### No menus
+
+The King's Online team has decided that we don't need menus in our Adapt courses so we have got rid of them. We use Contents instead!
+
 ### Contents
 
 Adapt-contents is an extension that is created by the King's Online team and acts shows the student the page structure and as well as where they are on the current page.
@@ -23,6 +27,15 @@ Accessibility is something the King's Online team keeps as a priority and we thi
 ### Fonts
 
 All the King's style fonts have been added.
+
+### Handlebars
+
+Custom handlebars file have been added for:
+
+*  accordion
+*  close
+*  quicknav-background
+
 
 ### LESS
 

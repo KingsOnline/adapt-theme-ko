@@ -1,11 +1,11 @@
 {
-  "name": "adapt-theme-finBank",
-  "version": "0.4.6",
+  "name": "adapt-theme-ko",
+  "version": "1.0.0",
   "framework": "^2.1.0",
-  "homepage": "https://github.com/adaptlearning/adapt-theme-finBank",
-  "displayName": "Global Banking and Finance",
-  "theme": "finBank",
-  "description": "Theme for the Global banking and finance module",
+  "homepage": "https://github.com/kingsonline/adapt-theme-ko",
+  "displayName": "King's Online",
+  "theme": "ko",
+  "description": "King's Online 2018 theme. Make all themes from me",
   "main": "js/vanilla.js",
   "keywords": [
     "adapt-plugin",
