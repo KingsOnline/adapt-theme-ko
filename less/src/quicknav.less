@@ -62,7 +62,11 @@
   }
 
   &.disabled {
-    visibility: hidden;
+      background-color: #cdd7dc !important;
+
+      * {
+          visibility: hidden;
+      }
   }
 
   @media all and (max-width: (@device-width-medium)) {
@@ -86,7 +90,6 @@
       background-color: @cta-button-color;
       color: @cta-button-text-color;
       max-width: 100%;
-      height: 92px;
       padding: 0;
 
       .seperator {
